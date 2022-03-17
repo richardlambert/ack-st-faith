@@ -1,0 +1,14 @@
+<% layout('layout') %>
+
+<div class="container p-5">
+  <% if (sermons) { %> <% for (const sermon of sermons) { %>
+  <article class="p-3 mb-3">
+    <h2 class="mb-0"><%= sermon.title %></h2>
+    <p class="text-muted"><%=sermon.theme%></p>
+    <p><%=sermon.date.toLocaleDateString() %></p>
+    <p class=""><%=sermon.preacher%></p>
+    <p class="text-truncate"><%= sermon.sermon %></p>
+    <a class="text-decoration-none" href="/sermons/<%= sermon._id %>">More</a>
+  </article>
+  <% } %> <% } %>
+</div>

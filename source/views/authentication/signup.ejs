@@ -1,0 +1,37 @@
+<% layout('layout') -%>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <form class="p-5 bg-light rounded" action="/auth/signin" method="post">
+        <h1 class="text-center">Sign Up</h1>
+        <div class="mb-3">
+          <label class="form-label" for="username"> Email Address </label>
+          <input
+            type="email"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="Email Address"
+            aria-describedby="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="password"> Password </label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign up</button>
+        <hr />
+        <p>
+          Already have an account?
+          <a href="/auth/signin" class="text-decoration-none">Sign in</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
